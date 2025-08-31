@@ -1,0 +1,291 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+    flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: 18px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;  /* stack children vertically */
+  flex: 2;                /* take main space */
+  gap: 20px;              /* spacing between boxes */
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#main-header {
+  border-bottom: 4px solid #003366;
+  padding-bottom: 18px;
+}
+
+.title{
+    font-family: "oswald", sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+.navbar{
+    background-color: #1e3a5f;
+    padding: 15px 0;
+    text-align: center;
+}
+.nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 100px;
+}
+.nav-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+
+}
+.nav-list li a:hover {
+  background-color: #2c4a74;
+  color: #ffc107;
+}
+main.content {
+  flex: 1 0 auto;
+}
+
+.main-text {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.additional-info {
+  background-color: #f5f5f5; /* light gray for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  position: relative;
+  flex: 1.5;
+  float:right;
+  width: 300px;
+  min-width: 250px;
+  margin-left: 20px;
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.sidebar img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* removes any inline spacing issues */
+}
+
+.sidebar .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffcc00;
+  color: #003366;
+  padding: 5px 10px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;  /* Stack vertically */
+    gap: 15px;
+  }
+}
+.footnotes {
+  background-color: #f0f4f8;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #333;
+  max-width: 600px;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.footnotes h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #005f99;
+}
+
+.footnotes ol {
+  padding-left: 20px;
+}
+
+.footnotes li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.footnotes li::before {
+  content: "🔗";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.footnotes a {
+  color: #007acc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footnotes a:hover {
+  color: #004d66;
+  text-decoration: underline;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #1e3a5f;
+  color: white;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+footer a {
+  color: #ffd700;  /* Gold or yellow tone */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ff6347;  /* Tomato red or something contrasting */
+}
+
+/* Style form labels and inputs */
+form label {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  color: #003366;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  margin-top: 2rem;
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #ffcc00;
+  color: #003366;
+  outline: none;
+}
+table {
+  width: 100%;            /* Make table use full container width */
+  border-collapse: collapse; /* Remove space between borders */
+  table-layout: fixed;    /* Force equal-width columns */
+}
+
+table th, table td {
+  border: 1px solid #ccc;  /* Optional: add borders */
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word;   /* Wrap long text */
+}
+table th:nth-child(1),
+table td:nth-child(1) {
+  width: 30%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+  width: 30%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3) {
+  width: 40%;
+}
+
+h2 {
+  position: relative;
+  top: 10px;   /* Move down */
+  left: 10px;  /* Move right */
+}

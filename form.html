@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Texas Official Website</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+      <img src="images/texas.png" alt="Texas Logo" style="width: 60px" />
+      <h1 class="title">Texas Official Website</h1>
+    </a>
+  </header>
+
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="capital.html">Austin</a></li>
+      <li><a href="dallas.html">Dallas</a></li>
+      <li><a href="houston.html">Houston</a></li>
+      <li><a href="form.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <section class="main-text">
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="confirmEmail">Confirm Email Address:</label>
+        <input type="email" id="confirmEmail" name="confirmEmail" required />
+
+        <label for="question">Your Question:</label>
+        <textarea id="question" name="question" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Texas Official Website | All rights reserved.</p>
+    <p><a href="form.html">Contact</a> | Designed by Cameron Lafitte</p>
+  </footer>
+
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    const email = document.getElementById('email').value;
+    const confirmEmail = document.getElementById('confirmEmail').value;
+
+    if (email !== confirmEmail) {
+      alert("Emails do not match");
+      event.preventDefault(); // Stop the form from submitting
+    }
+  });
+</script>
+
+</body>
+</html>

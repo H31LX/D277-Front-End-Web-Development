@@ -16,16 +16,16 @@ This static website provides an informative overview of Texas, including its nic
 
 ## Project Structure
 
-D277-Front-End-Web-Development/
-├── index.html
-├── austin.html
-├── dallas.html
-├── houston.html
-├── contact.html
-├── css/
-│ └── styles.css
-└── images/
-└── texas-seal.png
+- D277-Front-End-Web-Development
+  - index.html
+  - austin.html
+  - dallas.html
+  - houston.html
+  - contact.html
+  - css
+    - styles.css
+  - images
+    - texas-seal.png
 
 
 ## Live Demo
